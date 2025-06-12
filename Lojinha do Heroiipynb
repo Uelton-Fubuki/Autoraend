@@ -1,0 +1,108 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNImCAXileFr+pA2TlDYIUn",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Uelton-Fubuki/Autoraend/blob/main/Lojinha%20do%20Heroiipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 8,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "p6mg9buQ7kft",
+        "outputId": "dbce341e-aaec-4a27-de96-968f3e95a306"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o nome do item:Espada sagrada : Excalibur\n",
+            "Digite a quantidade:1\n",
+            "Digite o valor:80.000\n",
+            "Digite o nome do item:Capa da invisibilidade \n",
+            "Digite a quantidade:1\n",
+            "Digite o valor:35.000\n",
+            "Digite o nome do item:Elmo do invicto elfo\n",
+            "Digite a quantidade:1\n",
+            "Digite o valor:71.510\n",
+            "[['Espada sagrada : Excalibur', 1, 80.0], ['Capa da invisibilidade ', 1, 35.0], ['Elmo do invicto elfo', 1, 71.51]]\n"
+          ]
+        }
+      ],
+      "source": [
+        "lojinha = []\n",
+        "\n",
+        "for i in range(3):\n",
+        "   nome = input('Digite o nome do item:')\n",
+        "   qtd = int(input('Digite a quantidade:'))\n",
+        "   valor = float(input('Digite o valor:'))\n",
+        "   lojinha.append([nome, qtd, valor])\n",
+        "\n",
+        "print(lojinha)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "soma = 0\n",
+        "print('Lista de compra')\n",
+        "print('-' * 20)\n",
+        "print('Item | quantidade | valor unitário | total do item')\n",
+        "for item in lojinha:\n",
+        "   print('{} | {} | {} | {}'. format(item[0], item[1], item[2], item[1] * item[2]))\n",
+        "   soma += item[1] * item[2]\n",
+        "print('-' * 20)\n",
+        "print(f'Total a ser pago: {soma}')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Qi5durmDD6Q_",
+        "outputId": "7ae8732f-7f18-4a70-a8e1-77225ab63c44"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Lista de compra\n",
+            "--------------------\n",
+            "Item | quantidade | valor unitário | total do item\n",
+            "Espada sagrada : Excalibur | 1 | 80.0 | 80.0\n",
+            "Capa da invisibilidade  | 1 | 35.0 | 35.0\n",
+            "Elmo do invicto elfo | 1 | 71.51 | 71.51\n",
+            "--------------------\n",
+            "Total a ser pago: 186.51\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
